@@ -9,7 +9,9 @@ async function bootstrap() {
     res.removeHeader('date');
     next();
   });
-  app.enableCors();
+  app.enableCors({
+    origin: '*',
+  });
   await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
