@@ -3,7 +3,7 @@ import { User } from '../users/user.entity';
 
 @Entity()
 export class Report {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn("increment")
   id: number;
 
   @Column({ default: false })
