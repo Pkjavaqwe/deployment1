@@ -16,7 +16,7 @@ const cookieSession = require('cookie-session');
       isGlobal: true,
       envFilePath: `.env.${process.env.NODE_ENV}`,
     }),
-    TypeOrmModule.forRoot(),
+    TypeOrmModule.forRoot(require('../ormconfig')),
     UsersModule,
     ReportsModule,
   ],
@@ -32,7 +32,7 @@ const cookieSession = require('cookie-session');
   ],
 })
 export class AppModule {
-  constructor(private configService: ConfigService) {}
+  constructor(private configService: ConfigService) { }
 
   configure(consumer: MiddlewareConsumer) {
     consumer
