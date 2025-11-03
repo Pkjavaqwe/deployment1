@@ -11,7 +11,7 @@ import { Report } from '../reports/report.entity';
 
 @Entity()
 export class User {
-  @PrimaryGeneratedColumn("increment")
+  @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
