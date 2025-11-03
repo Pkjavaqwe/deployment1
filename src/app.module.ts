@@ -16,7 +16,7 @@ const cookieSession = require('cookie-session');
       isGlobal: true,
       envFilePath: `.env.${process.env.NODE_ENV}`,
     }),
-    TypeOrmModule.forRoot(require('ormconfig')),
+    TypeOrmModule.forRoot(),
     UsersModule,
     ReportsModule,
   ],
